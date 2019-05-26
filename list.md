@@ -6,6 +6,12 @@
 + pacman -Syyuu
 + pacman -Syu
 + pacman -S git sudo fish autossh openssh netctl
+# for the love of god get the kernel module in for rebooting
++ sudo modprobe bcm2835_wdt
++ then also make it permenant: https://wiki.archlinux.org/index.php/Kernel_module#Automatic_module_loading_with_systemd
+# if can install neovim
++ install neovim
++ set as default editor
 # create user with sudo
 + alarm ALL=(ALL) ALL
 # install package manager
@@ -41,7 +47,13 @@
 ## cryptab
 # setup mongodb
 + run my pkgbuild
-
+# install raspberry pi headers
++ https://aur.archlinux.org/packages/linux-aarch64-raspberrypi-headers/
+# install driver for wireless
++ https://aur.archlinux.org/packages/rtl8812au-rpi-dkms-git/
+# installing python-picamera
++ sudo pikaur -S python-picamera
++ edit PKGBUILD with "export READTHEDOCS=True"
 # the list of things needed:
 + user to work with i.e adding to sudoers etc
 + netctl network profiles
